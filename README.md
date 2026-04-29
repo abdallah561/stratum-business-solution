@@ -1,52 +1,92 @@
-# stratum-business-solution
-Official website for Stratum Business Solution — a regulatory consultancy in Dar es Salaam, Tanzania specializing in TMDA, TRA, and BRELA advisory services.
-
 # Stratum Business Solution — Official Website
 
-A static, multi-page business website for **Stratum Business Solution**, a regulatory consultancy based in Dar es Salaam, Tanzania, specializing in TMDA, TRA, and BRELA advisory services.
+A professional static website for **Stratum Business Solution**, a regulatory consultancy based in Mwenge, Dar es Salaam, Tanzania, specializing in Tanzania Business Services (TBS) registration services including product and premise registration, plus advisory on TMDA, TRA, and BRELA regulatory matters.
 
 ---
 
 ## Pages
 
-| File | Description |
-|---|---|
-| `index.html` | Homepage with hero, services overview, and call-to-action |
-| `about.html` | Company story, mission/vision, values, and founder profile |
-| `services.html` | Detailed breakdown of TMDA, TRA, and BRELA services |
-| `contact.html` | Contact form and business location details |
-| `style.css` | All site styles and responsive layout |
-| `script.js` | Navbar scroll behavior, mobile menu, scroll reveal, and form handling |
+| File            | Description                                                                 |
+| --------------- | --------------------------------------------------------------------------- |
+| `index.html`    | Homepage with hero section, core services, testimonials, and call-to-action |
+| `about.html`    | Company mission/vision, core values, and expert team information            |
+| `services.html` | Detailed breakdown of TBS, TMDA, TRA, and BRELA services                    |
+| `contact.html`  | Contact form with web3forms integration and business contact details        |
+| `style.css`     | All responsive styles optimized for mobile, tablet, and desktop             |
+| `script.js`     | Navbar animations, mobile menu, form handling, and carousel automation      |
 
 ---
 
 ## Tech Stack
 
-- Plain HTML5, CSS3, and vanilla JavaScript — no frameworks or build tools required
-- [Font Awesome 6.5](https://fontawesome.com/) via CDN for icons
-- Hosted on **GitHub Pages**
+- Plain HTML5, CSS3, and vanilla JavaScript — no frameworks or build tools
+- [Font Awesome 6.5](https://fontawesome.com/) icon library via CDN
+- Web3Forms integration for secure form submission
+- Fully responsive design for all screen sizes
+- Smooth scroll animations and reveal effects
 
 ---
 
-## Deployment (GitHub Pages)
+## Core Services
 
-1. Push all files to the `main` branch of this repository.
-2. Go to **Settings → Pages**.
-3. Under *Source*, select `Deploy from a branch` → `main` → `/ (root)`.
-4. Save. Your site will be live at:
+### TBS Registration Services
+
+- **Product Registration**: Mandatory registration for pre-packaged food, cosmetics and supplements
+- **Premise Registration**: Business location registration for warehouses, retail shops, manufacturing plants
+- **Compliance Advisory**: Ongoing regulatory guidance and staff capacity building
+- **Regulatory Representation**: Professional representation before authorities
+
+### Additional Services
+
+- TMDA Regulatory Affairs (pharmaceuticals, medical devices, diagnostics)
+- TRA Tax Consultancy (VAT registration, tax compliance, TRA representation)
+- BRELA Registration (company formation, trademarks, IP protection)
 
 ---
 
 ## Business Information
 
-| | |
-|---|---|
-| **Company** | Stratum Business Solution |
-| **BRELA Reg. No.** | G260328-9043 |
-| **Founder** | Zahara Said Makota |
-| **Location** | Coca-Cola Road, Kijitonyama, Kinondoni, Dar es Salaam |
-| **Phone** | +255 748 126 526 |
-| **Email** | makotazahra@gmail.com |
+| Key Information    | Details                                       |
+| ------------------ | --------------------------------------------- |
+| **Company Name**   | Stratum Business Solution                     |
+| **Specialization** | Tanzania Business Services (TBS) Registration |
+| **Location**       | Mwenge, Kinondoni, Dar es Salaam, Tanzania    |
+| **Phone/WhatsApp** | +255 748 126 526                              |
+| **Email**          | stratumbusinesssolutions@gmail.com            |
+
+---
+
+## Business Hours
+
+- **Monday – Friday**: 8:00 AM – 3:30 PM
+- **Saturday**: Until 1:30 PM
+
+---
+
+## Website Features
+
+✓ Fully responsive — optimized for all screen sizes  
+✓ Service carousels with smooth automation  
+✓ Client testimonials in rotating carousel  
+✓ Web3Forms secure contact submission  
+✓ Mobile-first responsive navigation  
+✓ Smooth scroll-reveal animations  
+✓ Professional social media links  
+✓ SEO-optimized meta descriptions  
+✓ Accessibility-compliant (aria labels, semantic HTML)
+
+---
+
+## Contact
+
+**Get in Touch**
+
+- Email: stratumbusinesssolutions@gmail.com
+- Phone: +255 748 126 526
+- WhatsApp: Available
+- Office: Mwenge, Dar es Salaam, Tanzania
+
+For consultations on product registration, premise registration, TBS compliance, or other regulatory matters, reach out anytime during business hours.
 
 ---
 

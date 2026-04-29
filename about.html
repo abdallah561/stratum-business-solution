@@ -1,24 +1,38 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us — Stratum Business Solution</title>
-  <meta name="description" content="Learn about Stratum Business Solution, founded by Zahara Said Makota, providing regulatory consultancy in Dar es Salaam, Tanzania." />
+  <meta name="description" content="Learn about Stratum Business Solution, a Tanzanian regulatory consultancy delivering expert services in TBS, TMDA, TRA, and BRELA advisory." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Favicon Links -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicoins/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicoins/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicoins/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicoins/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicoins/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicoins/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicoins/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicoins/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicoins/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicoins/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicoins/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicoins/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicoins/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicoins/manifest.json">
+  <meta name="msapplication-TileColor" content="#0f73c2">
+  <meta name="theme-color" content="#0f73c2">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar scrolled" id="navbar">
+<nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">SBS</div>
-      <div class="nav-logo-text">
-        <span class="brand" style="color:var(--navy)">Stratum</span>
-        <span class="sub" style="color:var(--blue)">Business Solution</span>
-      </div>
+      <img src="assets/images/company_logo.jpg.png" alt="Stratum Business Solution Logo" class="nav-logo-image">
+      <span class="nav-logo-text">Stratum Business Solution</span>
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-link" data-page="index.html">Home</a>
@@ -27,7 +41,7 @@
       <a href="contact.html" class="nav-link" data-page="contact.html">Contact</a>
     </div>
     <a href="contact.html" class="btn btn-primary nav-cta">Get in Touch <i class="fas fa-arrow-right"></i></a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -60,23 +74,18 @@
   <div class="container">
     <div class="about-intro">
       <div class="about-img reveal">
-        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80" alt="Professional business consultant" loading="lazy" />
+        <img src="assets/images/about/consultant.jpg" alt="Tanzanian consultant" loading="eager" />
         <div class="about-img-accent"></div>
         <div class="about-img-accent2"></div>
-        <div class="brela-badge">
-          <i class="fas fa-certificate" style="display:block;font-size:1.4rem;margin-bottom:4px;"></i>
-          BRELA Registered<br>
-          <small style="opacity:0.85;font-size:0.68rem;">G260328-9043</small>
-        </div>
       </div>
       <div>
         <span class="section-label reveal">Who We Are</span>
         <h2 class="section-title reveal">Built on Expertise.<br>Driven by Compliance.</h2>
         <p class="section-sub reveal" style="max-width:100%;margin-bottom:20px;">
-          Stratum Business Solution is a Tanzanian management consultancy registered with the Business Registrations and Licensing Agency (BRELA), specializing in regulatory advisory services across three critical domains: TMDA, TRA, and BRELA.
+          Stratum Business Solution is a Tanzanian management consultancy specializing in regulatory advisory services across four key domains: TBS, TMDA, TRA, and BRELA.
         </p>
         <p class="section-sub reveal" style="max-width:100%;margin-bottom:32px;">
-          Based in Kijitonyama, Kinondoni — Dar es Salaam, we serve individuals, startups, SMEs, and established enterprises seeking expert guidance through Tanzania's regulatory landscape. Our approach is personal, precise and always in the best interest of our clients.
+          Based in Mwenge, Kinondoni — Dar es Salaam, we serve individuals, startups, SMEs, and established enterprises seeking expert guidance through Tanzania's regulatory landscape. Our approach is personal, precise and always in the best interest of our clients.
         </p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;" class="reveal">
           <a href="contact.html" class="btn btn-primary">Work With Us <i class="fas fa-arrow-right"></i></a>
@@ -94,12 +103,12 @@
       <span class="section-label">Our Purpose</span>
       <h2 class="section-title">Mission, Vision & Values</h2>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:56px;" class="reveal">
+    <div class="reveal about-mission-grid">
       <div style="background:var(--navy);color:white;padding:44px;border-radius:20px;position:relative;overflow:hidden;">
         <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(15,115,194,0.2);"></div>
         <i class="fas fa-bullseye" style="font-size:2rem;color:var(--blue);margin-bottom:16px;display:block;position:relative;z-index:1;"></i>
         <h3 style="font-size:1.6rem;color:white;margin-bottom:12px;position:relative;z-index:1;">Our Mission</h3>
-        <p style="color:rgba(255,255,255,0.7);line-height:1.85;font-size:0.95rem;position:relative;z-index:1;">To provide professional, accurate and client-focused regulatory consultancy that empowers Tanzanian businesses to operate in full compliance with TMDA, TRA and BRELA requirements — reducing risk and creating growth opportunities.</p>
+        <p style="color:rgba(255,255,255,0.7);line-height:1.85;font-size:0.95rem;position:relative;z-index:1;">To provide professional, accurate and client-focused regulatory consultancy that empowers Tanzanian businesses to operate in full compliance with TBS, TMDA, TRA and BRELA requirements — reducing risk and creating growth opportunities.</p>
       </div>
       <div style="background:white;padding:44px;border-radius:20px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-mid);">
         <i class="fas fa-eye" style="font-size:2rem;color:var(--green);margin-bottom:16px;display:block;"></i>
@@ -132,30 +141,30 @@
   </div>
 </section>
 
-<!-- FOUNDER SECTION -->
+<!-- LEADERSHIP SECTION -->
 <section class="section-pad founder-section">
   <div class="container">
     <div class="founder-grid">
       <div class="founder-img-wrap reveal">
-        <img class="founder-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Professional founder portrait" loading="lazy" />
+        <img class="founder-img" src="assets/images/about/founder.jpg" alt="Tanzanian professional portrait" loading="eager" />
         <div class="founder-cert">
           <i class="fas fa-id-card"></i>
           <div class="founder-cert-text">
-            <strong>Zahara Said Makota</strong>
-            Founder & Principal Consultant
+            <strong>Leadership Team</strong>
+            Regulatory Consultancy Experts
           </div>
         </div>
       </div>
       <div>
-        <span class="section-label white reveal">Our Founder</span>
-        <h2 class="section-title white reveal">Meet the Principal Consultant</h2>
+        <span class="section-label white reveal">Leadership</span>
+        <h2 class="section-title white reveal">Meet Our Regulatory Leadership</h2>
         <p style="color:rgba(255,255,255,0.7);line-height:1.9;margin-bottom:20px;font-size:1rem;" class="reveal">
-          Zahara Said Makota is the founder and principal consultant of Stratum Business Solution. A dedicated professional with in-depth knowledge of Tanzanian regulatory frameworks, Zahara established Stratum to address the growing need for reliable, specialized regulatory advisory services in Tanzania's evolving business environment.
+          Stratum Business Solution is guided by a dedicated leadership team with deep knowledge of Tanzanian regulatory frameworks. Our consultants combine practical experience and compliance expertise to support businesses across TBS, TMDA, TRA, and BRELA.
         </p>
         <p style="color:rgba(255,255,255,0.7);line-height:1.9;margin-bottom:36px;font-size:1rem;" class="reveal">
-          With hands-on experience navigating the complexities of TMDA product registration, TRA tax compliance, and BRELA business registration processes, she leads each client engagement with professionalism, dedication and a genuine commitment to their success.
+          We deliver reliable advisory services, clear regulatory guidance, and dedicated support to help your business stay compliant while moving forward confidently.
         </p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="reveal">
+        <div class="reveal founder-info-grid">
           <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px 20px;">
             <i class="fas fa-map-marker-alt" style="color:var(--blue);margin-bottom:8px;display:block;"></i>
             <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Location</div>
@@ -165,16 +174,6 @@
             <i class="fas fa-briefcase" style="color:var(--green);margin-bottom:8px;display:block;"></i>
             <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Specialization</div>
             <div style="color:white;font-size:0.9rem;">Regulatory Consultancy</div>
-          </div>
-          <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px 20px;">
-            <i class="fas fa-phone" style="color:var(--blue);margin-bottom:8px;display:block;"></i>
-            <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Phone</div>
-            <div style="color:white;font-size:0.9rem;">+255 748 126 526</div>
-          </div>
-          <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px 20px;">
-            <i class="fas fa-envelope" style="color:var(--green);margin-bottom:8px;display:block;"></i>
-            <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Email</div>
-            <div style="color:white;font-size:0.9rem;">makotazahra@gmail.com</div>
           </div>
         </div>
       </div>
@@ -204,12 +203,13 @@
         <span class="brand">Stratum Business Solution</span>
         <span class="sub">Regulatory Consultancy · Tanzania</span>
       </div>
-      <p class="footer-tagline">Your trusted partner for TMDA, TRA and BRELA regulatory affairs in Tanzania.</p>
+      <p class="footer-tagline">Your trusted partner for TBS, TMDA, TRA and BRELA regulatory affairs in Tanzania. Expert advisory, seamless compliance, real results.</p>
       <div class="footer-socials">
-        <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="footer-social"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" class="footer-social"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="footer-social" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="footer-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
     <div>
@@ -219,31 +219,52 @@
         <a href="about.html" class="footer-link">About Us</a>
         <a href="services.html" class="footer-link">Our Services</a>
         <a href="contact.html" class="footer-link">Contact Us</a>
+        <a href="https://www.tmda.go.tz/" class="footer-link" target="_blank" rel="noopener noreferrer">TMDA Website</a>
+        <a href="https://www.tra.go.tz/" class="footer-link" target="_blank" rel="noopener noreferrer">TRA Website</a>
+        <a href="https://www.tbs.go.tz/" class="footer-link" target="_blank" rel="noopener noreferrer">TBS Website</a>
+        <a href="https://www.brela.go.tz/" class="footer-link" target="_blank" rel="noopener noreferrer">BRELA Website</a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title">Services</div>
+      <div class="footer-col-title">Our Services</div>
       <div class="footer-links">
+        <a href="services.html#tbs" class="footer-link">TBS Standards Compliance</a>
         <a href="services.html#tmda" class="footer-link">TMDA Regulatory Affairs</a>
         <a href="services.html#tra" class="footer-link">TRA Tax Consultancy</a>
         <a href="services.html#brela" class="footer-link">BRELA Registration</a>
+        <a href="services.html#brela" class="footer-link">IP Protection</a>
+        <a href="services.html#tmda" class="footer-link">Product Dossiers</a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title">Contact</div>
+      <div class="footer-col-title">Contact Us</div>
       <div class="footer-contact">
-        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Coca-Cola Road, Kijitonyama, Kinondoni, Dar es Salaam</span></div>
-        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>makotazahra@gmail.com</span></div>
-        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+255 748 126 526</span></div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Coca-Cola Road, Near Josam House, Opposite Equity Bank (Mwenge Branch), Kinondoni, Dar es Salaam</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>stratumbusinesssolutions@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+255 748 126 526</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock"></i>
+          <span>Mon – Fri: 8:00 AM – 3:30 PM | Sat: 8:00 AM – 1:30 PM</span>
+        </div>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Stratum Business Solution. All rights reserved.</span>
-    <span>BRELA Reg. No. G260328-9043</span>
+    <span>Trusted Regulatory Advisory Services for Tanzania</span>
   </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
