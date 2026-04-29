@@ -11,11 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Mobile Menu ──
-  const hamburger = document.getElementById('hamburger');
+  const hamburger = document.getElementById('mobileMenuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', () => {
       mobileMenu.classList.toggle('open');
+    });
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
     });
     document.addEventListener('click', (e) => {
       if (!navbar.contains(e.target)) mobileMenu.classList.remove('open');
@@ -71,68 +77,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
 
-  // ── Contact Form Submission (Web3Forms) ──
+  // ── Contact Form Submission ──
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    contactForm.setAttribute('method', 'POST');
 
-      const btn = document.getElementById('submitBtn');
-      const statusEl = document.getElementById('formStatus');
-      const agreeBox = document.getElementById('agree');
-
-      // Validate agreement checkbox
-      if (!agreeBox.checked) {
-        statusEl.style.display = 'block';
-        statusEl.style.background = '#fef2f2';
-        statusEl.style.color = '#b91c1c';
-        statusEl.style.border = '1px solid #fca5a5';
-        statusEl.textContent = 'Please agree to be contacted before sending your message.';
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const agreeCheckbox = contactForm.querySelector('#agree');
+      if (agreeCheckbox && !agreeCheckbox.checked) {
+        alert('Please confirm that you agree to be contacted.');
         return;
       }
 
-      // Loading state
-      const originalHTML = btn.innerHTML;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-      btn.disabled = true;
-      statusEl.style.display = 'none';
+      const submitButton = contactForm.querySelector('[type="submit"]');
+      const originalButtonText = submitButton ? submitButton.innerHTML : 'Sending...';
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Sending...';
+      }
 
+      const formData = new FormData(contactForm);
       try {
-        const formData = new FormData(contactForm);
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const response = await fetch(contactForm.action, {
           method: 'POST',
-          body: formData
+          body: formData,
         });
-        const result = await response.json();
 
-        if (result.success) {
-          // Success state
-          btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-          btn.style.background = 'var(--green)';
-          statusEl.style.display = 'block';
-          statusEl.style.background = '#f0fdf4';
-          statusEl.style.color = '#15803d';
-          statusEl.style.border = '1px solid #86efac';
-          statusEl.textContent = '✓ Thank you! Your message has been received. We\'ll respond within one business day.';
-          contactForm.reset();
-          setTimeout(() => {
-            btn.innerHTML = originalHTML;
-            btn.style.background = '';
-            btn.disabled = false;
-            statusEl.style.display = 'none';
-          }, 5000);
-        } else {
-          throw new Error(result.message || 'Submission failed');
+        let success = response.ok;
+        if (response.headers.get('content-type')?.includes('application/json')) {
+          const json = await response.json();
+          success = success && json.success !== false;
         }
-      } catch (err) {
-        // Error state
-        btn.innerHTML = originalHTML;
-        btn.disabled = false;
-        statusEl.style.display = 'block';
-        statusEl.style.background = '#fef2f2';
-        statusEl.style.color = '#b91c1c';
-        statusEl.style.border = '1px solid #fca5a5';
-        statusEl.textContent = '✗ Something went wrong. Please try again or contact us directly at makotazahra@gmail.com.';
+
+        if (success) {
+          window.location.href = 'thank-you.html';
+        } else {
+          throw new Error('Unable to submit the form at this time.');
+        }
+      } catch (error) {
+        console.error('Contact form submission error:', error);
+        alert('Sorry, we could not send your message right now. Please try again later or email stratumbusinesssolutions@gmail.com.');
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
       }
     });
   }
@@ -141,5 +131,75 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.service-card, .testimonial-card, .value-card, .why-item').forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.08}s`;
   });
+
+  const servicesTrack = document.getElementById('servicesTrack');
+  const servicePrev = document.querySelector('.carousel-prev');
+  const serviceNext = document.querySelector('.carousel-next');
+  if (servicesTrack && servicePrev && serviceNext) {
+    const getScrollAmount = () => {
+      const card = servicesTrack.querySelector('.service-card');
+      return card ? card.offsetWidth + 28 : 340;
+    };
+
+    servicePrev.addEventListener('click', () => {
+      servicesTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    });
+
+    serviceNext.addEventListener('click', () => {
+      servicesTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
+
+    let carouselAutoScroll = setInterval(() => {
+      servicesTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    }, 6000);
+
+    const pauseCarousel = () => clearInterval(carouselAutoScroll);
+    const restartCarousel = () => {
+      pauseCarousel();
+      carouselAutoScroll = setInterval(() => {
+        servicesTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      }, 6000);
+    };
+
+    servicesTrack.addEventListener('mouseenter', pauseCarousel);
+    servicesTrack.addEventListener('mouseleave', restartCarousel);
+    servicePrev.addEventListener('click', restartCarousel);
+    serviceNext.addEventListener('click', restartCarousel);
+  }
+
+  const testimonialsTrack = document.getElementById('testimonialsTrack');
+  const testimonialsPrev = document.querySelector('.testimonials-carousel .carousel-prev');
+  const testimonialsNext = document.querySelector('.testimonials-carousel .carousel-next');
+  if (testimonialsTrack && testimonialsPrev && testimonialsNext) {
+    const getTestimonialScroll = () => {
+      const card = testimonialsTrack.querySelector('.testimonial-card');
+      return card ? card.offsetWidth + 28 : 348;
+    };
+
+    testimonialsPrev.addEventListener('click', () => {
+      testimonialsTrack.scrollBy({ left: -getTestimonialScroll(), behavior: 'smooth' });
+    });
+
+    testimonialsNext.addEventListener('click', () => {
+      testimonialsTrack.scrollBy({ left: getTestimonialScroll(), behavior: 'smooth' });
+    });
+
+    let testimonialAutoScroll = setInterval(() => {
+      testimonialsTrack.scrollBy({ left: getTestimonialScroll(), behavior: 'smooth' });
+    }, 6000);
+
+    const pauseTestimonialCarousel = () => clearInterval(testimonialAutoScroll);
+    const restartTestimonialCarousel = () => {
+      pauseTestimonialCarousel();
+      testimonialAutoScroll = setInterval(() => {
+        testimonialsTrack.scrollBy({ left: getTestimonialScroll(), behavior: 'smooth' });
+      }, 6000);
+    };
+
+    testimonialsTrack.addEventListener('mouseenter', pauseTestimonialCarousel);
+    testimonialsTrack.addEventListener('mouseleave', restartTestimonialCarousel);
+    testimonialsPrev.addEventListener('click', restartTestimonialCarousel);
+    testimonialsNext.addEventListener('click', restartTestimonialCarousel);
+  }
 
 });
