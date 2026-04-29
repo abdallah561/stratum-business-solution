@@ -862,6 +862,7 @@ h1, h2, h3, h4 {
   min-width: 320px;
   flex: 0 0 320px;
   scroll-snap-align: start;
+  min-height: 300px;
 }
 
 .testimonial-card {
@@ -1585,9 +1586,10 @@ h1, h2, h3, h4 {
   .cta-buttons .btn { width: 100%; max-width: 300px; }
   
   .values-grid { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .stat-item { padding: 12px; }
-  .stat-num { font-size: 2rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 0 8px; }
+  .stat-item { padding: 16px 8px; }
+  .stat-num { font-size: 2.2rem; }
+  .stat-label { font-size: 0.75rem; }
   
   .why-list { gap: 16px; }
   .why-item { padding: 16px; }
@@ -1651,10 +1653,18 @@ h1, h2, h3, h4 {
   .cta-buttons .btn { padding: 10px 20px; font-size: 0.88rem; }
   
   .values-grid { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: 1fr; gap: 12px; }
-  .stat-item { padding: 8px; }
-  .stat-num { font-size: 1.8rem; margin-bottom: 4px; }
-  .stat-icon { font-size: 1.4rem; }
+  .stats-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 4px; max-width: 100%; }
+  .stat-item { padding: 14px 8px; }
+  .stat-num { font-size: 2rem; margin-bottom: 6px; }
+  .stat-icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .stat-label { font-size: 0.7rem; }
+  
+  .testimonials-track { gap: 16px; padding-bottom: 16px; }
+  .testimonials-track .testimonial-card { min-width: 280px; flex: 0 0 280px; }
+  .testimonial-card { padding: 20px; min-height: 280px; }
+  .testimonial-quote { font-size: 0.9rem; }
+  .testimonial-author-name { font-size: 0.95rem; }
+  .testimonial-author-role { font-size: 0.75rem; }
   
   .why-item { padding: 12px; gap: 12px; }
   .why-item-title { font-size: 0.95rem; }
