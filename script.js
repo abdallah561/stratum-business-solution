@@ -111,6 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (success) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_form_submit', {
+              event_category: 'Contact',
+              event_label: 'Contact Form',
+              value: 1,
+            });
+          }
           window.location.href = 'thank-you.html';
         } else {
           throw new Error('Unable to submit the form at this time.');
