@@ -58,6 +58,41 @@ h1, h2, h3, h4 {
 .bg-navy { background: var(--navy); }
 .bg-navy-dark { background: var(--navy-dark); }
 
+/* ── Link List ── */
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.link-list li {
+  padding: 0;
+}
+.link-list a {
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.link-list a:hover {
+  color: var(--navy);
+  padding-left: 4px;
+}
+.link-list a::before {
+  content: '›';
+  color: var(--blue);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+.link-list a:hover::before {
+  color: var(--navy);
+}
+
 /* ── Buttons ── */
 .btn {
   display: inline-flex;
