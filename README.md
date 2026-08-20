@@ -51,7 +51,7 @@ A professional static website for **Stratum Business Solution**, a regulatory co
 | **Company Name**   | Stratum Business Solution                     |
 | **Specialization** | Tanzania Business Services (TBS) Registration |
 | **Location**       | Mwenge, Kinondoni, Dar es Salaam, Tanzania    |
-| **Phone/WhatsApp** | +255 748 126 526                              |
+| **Phone/WhatsApp** | +255 718652219                                |
 | **Email**          | stratumbusinesssolutions@gmail.com            |
 
 ---
@@ -82,7 +82,7 @@ A professional static website for **Stratum Business Solution**, a regulatory co
 **Get in Touch**
 
 - Email: stratumbusinesssolutions@gmail.com
-- Phone: +255 748 126 526
+- Phone: +255 718652219
 - WhatsApp: Available
 - Office: Mwenge, Dar es Salaam, Tanzania
 
