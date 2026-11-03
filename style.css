@@ -349,10 +349,7 @@ p {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.12;
+  background: radial-gradient(ellipse at 70% 35%, rgba(96,180,245,0.2), transparent 55%);
 }
 
 .hero-shapes {
